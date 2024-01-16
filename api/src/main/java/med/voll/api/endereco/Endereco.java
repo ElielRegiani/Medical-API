@@ -21,7 +21,6 @@ public class Endereco {
     private String numero;
 
     public Endereco(DadosEndereco dadosEndereco) {
-        System.out.println(dadosEndereco != null);
         this.logradouro = dadosEndereco.getLogradouro();
         this.bairro = dadosEndereco.getBairro();
         this.cep = dadosEndereco.getCep();
@@ -29,5 +28,29 @@ public class Endereco {
         this.uf = dadosEndereco.getUf();
         this.complemento = dadosEndereco.getComplemento();
         this.numero = dadosEndereco.getNumero();
+    }
+
+    public void atualizarInformacoes(DadosEndereco dadosEndereco) {
+        if (dadosEndereco.getLogradouro() != null) {
+            this.logradouro = dadosEndereco.getLogradouro();
+        }
+        if (dadosEndereco.getBairro() != null) {
+            this.bairro = dadosEndereco.getBairro();
+        }
+        if (dadosEndereco.getCep() != null) {
+            this.cep = dadosEndereco.getCep();
+        }
+        if (dadosEndereco.getCidade() != null) {
+            this.cidade = dadosEndereco.getCidade();
+        }
+        if (dadosEndereco.getUf() != null) {
+            this.uf = dadosEndereco.getUf();
+        }
+        if (dadosEndereco.getComplemento() != null) {
+            this.complemento = dadosEndereco.getComplemento();
+        }
+        if (dadosEndereco.getNumero() != null) {
+            this.numero = dadosEndereco.getNumero();
+        }
     }
 }

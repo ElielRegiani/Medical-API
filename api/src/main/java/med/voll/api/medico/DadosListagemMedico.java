@@ -2,12 +2,14 @@ package med.voll.api.medico;
 
 public class DadosListagemMedico {
 
+    private Long id;
     private String nome;
     private String email;
     private String crm;
     private Especialidade especialidade;
 
     public DadosListagemMedico(Medico medico) {
+        this.id = medico.getId();
         this.nome = medico.getNome();
         this.crm = medico.getCrm();
         this.email = medico.getEmail();
@@ -44,5 +46,13 @@ public class DadosListagemMedico {
 
     public void setEspecialidade(Especialidade especialidade) {
         this.especialidade = especialidade;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

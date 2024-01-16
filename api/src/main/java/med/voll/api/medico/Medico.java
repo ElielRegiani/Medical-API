@@ -74,4 +74,24 @@ public class Medico {
     public void setEspecialidade(Especialidade especialidade) {
         this.especialidade = especialidade;
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void atualizarInformacoes(DadosAtualizacaoMedico dados) {
+        if (dados.getNome() != null) {
+            this.nome = dados.getNome();
+        }
+        if (dados.getTelefone() != null) {
+            this.telefone = dados.getTelefone();
+        }
+        if (dados.getEndereco() != null) {
+            this.endereco.atualizarInformacoes(dados.getEndereco());
+        }
+    }
 }
