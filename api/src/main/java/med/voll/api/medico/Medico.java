@@ -33,6 +33,7 @@ public class Medico {
     private Especialidade especialidade;
     @Embedded
     private Endereco endereco;
+    private boolean ativo;
 
     public Medico(DadosCadastroMedico dados) {
         this.nome = dados.getNome();
@@ -41,6 +42,7 @@ public class Medico {
         this.telefone = dados.getTelefone();
         this.especialidade = dados.getEspecialidade();
         this.endereco = new Endereco(dados.getEndereco());
+        this.ativo = true;
     }
 
     public String getNome() {
@@ -93,5 +95,17 @@ public class Medico {
         if (dados.getEndereco() != null) {
             this.endereco.atualizarInformacoes(dados.getEndereco());
         }
+    }
+
+    public boolean isAtivo() {
+        return ativo;
+    }
+
+    public void setAtivo(boolean ativo) {
+        this.ativo = ativo;
+    }
+
+    public void exluir() {
+        this.ativo = false;
     }
 }
