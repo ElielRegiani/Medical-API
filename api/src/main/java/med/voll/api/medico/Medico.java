@@ -85,6 +85,14 @@ public class Medico {
         this.id = id;
     }
 
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
     public void atualizarInformacoes(DadosAtualizacaoMedico dados) {
         if (dados.getNome() != null) {
             this.nome = dados.getNome();
@@ -105,7 +113,15 @@ public class Medico {
         this.ativo = ativo;
     }
 
-    public void exluir() {
+    public void excluir() {
         this.ativo = false;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 }
