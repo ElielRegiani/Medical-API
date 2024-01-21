@@ -1,19 +1,33 @@
-package med.voll.api.medico;
+package med.voll.api.domain.medico;
 
-public class DadosListagemMedico {
+import med.voll.api.domain.endereco.Endereco;
+
+public class DadosDetalhamentoMedico {
 
     private Long id;
     private String nome;
     private String email;
+    private String telefone;
     private String crm;
     private Especialidade especialidade;
+    private Endereco endereco;
 
-    public DadosListagemMedico(Medico medico) {
+    public DadosDetalhamentoMedico(Medico medico) {
         this.id = medico.getId();
         this.nome = medico.getNome();
-        this.crm = medico.getCrm();
         this.email = medico.getEmail();
+        this.telefone = medico.getTelefone();
+        this.crm = medico.getCrm();
         this.especialidade = medico.getEspecialidade();
+        this.endereco = medico.getEndereco();
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -32,6 +46,14 @@ public class DadosListagemMedico {
         this.email = email;
     }
 
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
     public String getCrm() {
         return crm;
     }
@@ -48,11 +70,11 @@ public class DadosListagemMedico {
         this.especialidade = especialidade;
     }
 
-    public Long getId() {
-        return id;
+    public Endereco getEndereco() {
+        return endereco;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
     }
 }

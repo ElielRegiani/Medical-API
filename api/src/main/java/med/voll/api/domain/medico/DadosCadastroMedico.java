@@ -1,4 +1,4 @@
-package med.voll.api.medico;
+package med.voll.api.domain.medico;
 
 import javax.validation.Valid;
 import javax.validation.constraints.Email;
@@ -6,23 +6,23 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
-import med.voll.api.endereco.DadosEndereco;
+import med.voll.api.domain.endereco.DadosEndereco;
 
 public class DadosCadastroMedico {
 
-    @NotBlank
+    @NotBlank(message = "{nome.obrigatorio}")
     private String nome;
-    @NotBlank
-    @Email
+    @NotBlank(message = "{email.obrigatorio}")
+    @Email(message = "{email.invalido}")
     private String email;
-    @NotBlank
+    @NotBlank(message = "{telefone.obrigatorio}")
     private String telefone;
-    @NotBlank
-    @Pattern(regexp = "\\d{4,6}")
+    @NotBlank(message = "{crm.obrigatorio}")
+    @Pattern(regexp = "\\d{4,6}", message = "{crm.invalido}")
     private String crm;
-    @NotNull
+    @NotNull(message = "{especialidade.obrigatoria}")
     private Especialidade especialidade;
-    @NotNull
+    @NotNull(message = "{endereco.obrigatorio}")
     @Valid
     private DadosEndereco endereco;
 
