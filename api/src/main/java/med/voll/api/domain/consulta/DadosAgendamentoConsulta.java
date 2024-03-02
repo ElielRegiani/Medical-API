@@ -4,6 +4,8 @@ import java.time.LocalDateTime;
 import javax.validation.constraints.Future;
 import javax.validation.constraints.NotNull;
 
+import med.voll.api.domain.medico.Especialidade;
+
 public class DadosAgendamentoConsulta {
 
     private Long idMedico;
@@ -14,6 +16,8 @@ public class DadosAgendamentoConsulta {
     @NotNull
     @Future
     private LocalDateTime data;
+
+    private Especialidade especialidade;
 
     public Long getIdMedico() {
         return idMedico;
@@ -37,5 +41,13 @@ public class DadosAgendamentoConsulta {
 
     public void setData(LocalDateTime data) {
         this.data = data;
+    }
+
+    public Especialidade getEspecialidade() {
+        return especialidade;
+    }
+
+    public void setEspecialidade(Especialidade especialidade) {
+        this.especialidade = especialidade;
     }
 }
