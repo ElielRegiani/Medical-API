@@ -19,6 +19,24 @@ public class DadosEndereco {
     private String complemento;
     private String numero;
 
+    public DadosEndereco(String rua, String bairro, String cep, String cidade, String uf, String complemento, String numero) {
+        this.logradouro = rua;
+        this.bairro = bairro;
+        this.cep = cep;
+        this.cidade = cidade;
+        this.uf = uf;
+        this.numero = numero;
+    }
+
+    public DadosEndereco(DadosEndereco dadosEndereco) {
+        this.logradouro = dadosEndereco.getLogradouro();
+        this.bairro = dadosEndereco.getBairro();
+        this.cep = dadosEndereco.getCep();
+        this.cidade = dadosEndereco.getCidade();
+        this.uf = dadosEndereco.getUf();
+        this.numero = dadosEndereco.getNumero();
+    }
+
     public String getLogradouro() {
         return logradouro;
     }

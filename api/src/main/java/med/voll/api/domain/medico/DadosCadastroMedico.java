@@ -26,6 +26,15 @@ public class DadosCadastroMedico {
     @Valid
     private DadosEndereco endereco;
 
+    public DadosCadastroMedico(String nome, String email, String telefone, String crm, Especialidade especialidade, DadosEndereco dadosEndereco) {
+        this.nome = nome;
+        this.email = email;
+        this.telefone = telefone;
+        this.crm = crm;
+        this.especialidade = especialidade;
+        this.endereco = new DadosEndereco(dadosEndereco);
+    }
+
     public String getNome() {
         return nome;
     }

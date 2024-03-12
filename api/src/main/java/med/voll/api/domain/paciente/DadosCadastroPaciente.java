@@ -28,6 +28,14 @@ public class DadosCadastroPaciente {
     @Valid
     private DadosEndereco endereco;
 
+    public DadosCadastroPaciente(String nome, String email, String telefone, String cpf, DadosEndereco dadosEndereco) {
+        this.nome = nome;
+        this.email = email;
+        this.telefone = telefone;
+        this.cpf = cpf;
+        this.endereco = new DadosEndereco(dadosEndereco);
+    }
+
     public String getNome() {
         return nome;
     }

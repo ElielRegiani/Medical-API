@@ -37,6 +37,13 @@ public class Consulta {
         this.data = data;
     }
 
+    public Consulta(Long id, Medico medico, Paciente paciente, LocalDateTime data) {
+        this.id = id;
+        this.medico = medico;
+        this.paciente = paciente;
+        this.data = data;
+    }
+
     public Long getId() {
         return id;
     }
