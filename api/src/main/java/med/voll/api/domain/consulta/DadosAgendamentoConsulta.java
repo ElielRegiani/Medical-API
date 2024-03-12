@@ -19,6 +19,13 @@ public class DadosAgendamentoConsulta {
 
     private Especialidade especialidade;
 
+    public DadosAgendamentoConsulta(Long idMedico, Long idPaciente, LocalDateTime data, Especialidade especialidade) {
+        this.idMedico = idMedico;
+        this.idPaciente = idPaciente;
+        this.data = data;
+        this.especialidade = especialidade;
+    }
+
     public Long getIdMedico() {
         return idMedico;
     }

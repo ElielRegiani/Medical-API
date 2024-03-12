@@ -13,6 +13,10 @@ public class DadosDetalhamentoConsulta {
     private LocalDateTime data;
 
     public DadosDetalhamentoConsulta(Long id, Long idMedico, Long idPaciente, LocalDateTime data) {
+        this.id = id;
+        this.idMedico = idMedico;
+        this.idPaciente = idPaciente;
+        this.data = data;
     }
 
     public DadosDetalhamentoConsulta(Consulta consulta) {
